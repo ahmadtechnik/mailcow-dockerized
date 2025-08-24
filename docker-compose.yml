@@ -413,7 +413,7 @@ services:
         - REDISHOST=${REDISHOST:-}
         - IPV4_NETWORK=${IPV4_NETWORK:-172.22.1}
         - NGINX_USE_PROXY_PROTOCOL=${NGINX_USE_PROXY_PROTOCOL:-n}
-        - TRUSTED_PROXIES=${TRUSTED_PROXIES:-}
+        - TRUSTED_PROXIES=${TRUSTED_PROXIES:-10.0.0.0/24}
       volumes:
         - ./data/web:/web:ro,z
         - ./data/conf/rspamd/dynmaps:/dynmaps:ro,z
