@@ -427,10 +427,6 @@ services:
         - ./important/sogo-web:/usr/lib/GNUstep/SOGo/
       network_mode: "host"
       restart: always
-      networks:
-        mailcow-network:
-          aliases:
-            - nginx
 
     acme-mailcow:
       depends_on:
